@@ -26,3 +26,10 @@ include:
     artifact-name: corne_left
   - board: nice_nano
     shield: corne_right
+  # TEMPORARY diagnostic build: central + USB logging, no Studio.
+  # Flash to the LEFT half to watch key-position events over USB serial,
+  # then reflash the normal corne_left. Remove this entry when done.
+  - board: nice_nano
+    shield: corne_left
+    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    artifact-name: corne_left_usblog
